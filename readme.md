@@ -81,14 +81,14 @@ Running the script is very straightforward:
 
 1. download the code/clone the repository
 
-You can read more about how this all works in [this blog post](https://www.spokenlikeageek.com/2024/12/16/what-should-i-play-next/).
+You can read more about how this all works in [this blog post](https://www.spokenlikeageek.com/2025/04/01/family-history-database-searches/).
 
 ### Prerequisites
 
 Requirements are very simple, it requires the following:
 
 1. PHP (I tested on v8.3.14)
-2. a RootsMagic SQLite database.
+2. a RootsMagic SQLite database. Drop it into the same folder as the code.
 
 ### Installation
 
@@ -96,7 +96,7 @@ Requirements are very simple, it requires the following:
    ```sh
    git clone https://github.com/williamsdb/family-history-checks.git
    ```
-2. rename config_dummy.php to config.php and changes the settings in it.
+2. rename config_dummy.php to config.php and change the settings in it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,11 +107,7 @@ Requirements are very simple, it requires the following:
 
 Install and point your browser at wherever you put it!
 
-Rather than retrieving the information from Plex everytime you access it data is cached in a local SQLite database. By default the cache is refreshed every 7 days but if you want to force a recache of the information go to the following page:
-
-https://<your domain>?page=recache
-
-_For more information, please refer to the [this blog post](https://www.spokenlikeageek.com/2024/12/16/what-should-i-play-next/)_
+_For more information, please refer to the [this blog post](https://www.spokenlikeageek.com/2025/04/01/family-history-database-searches/)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,16 +116,7 @@ _For more information, please refer to the [this blog post](https://www.spokenli
 <!-- ROADMAP -->
 ## Known Issues
 
-If your Plex server doesn't have a secure connection (http) and you install What Should I Watch Next? on a secure connection (https) you won't see any images on the last page and will see "Mixed Content" messages in the browser console:
-
-```Mixed Content: The page at '<URL>' was loaded over HTTPS, but requested an insecure element '<URL>'. This request was automatically upgraded to HTTPS, For more information see <URL>```
-
-To avoid this you have three choices:
-
-1. install a certficate on you Plex server
-2. run What Should I Watch Next? over an insecure connection (http)
-3. add an exception in the browser for the mixed content on this site.
-
+Full text search is incomplete.
 
 See the [open issues](https://github.com/williamsdb/family-history-checks/issues) for a full list of proposed features (and known issues).
 
