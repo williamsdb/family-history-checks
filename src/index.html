@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family History Checks</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="./custom.css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <h1>Family History Checks</h1>
+      </div>
+    </header>
+    <div class="col-lg-8 mx-auto p-4">
+      <h2><!-- h2 --></h2>
+      <form role="form" action="<!-- action -->" method="post">
+        <div class="grid-container">
+          <!-- grid -->
+        </div>
+        <div class="grid-container">
+          <button type="submit" class="btn btn-primary mt-4" id="nextButton">
+            Next
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="below-text">
+      <small
+        >Built by <a href="https://neilthompson.me">Neil Thompson</a>.</small
+      >
+    </div>
+    <script>
+      function selectBox(element, optionId) {
+        // Uncheck all checkboxes and remove the 'selected' class from all divs
+        const allBoxes = document.querySelectorAll(".box");
+        allBoxes.forEach((box) => {
+          box.classList.remove("selected");
+        });
+
+        const allCheckboxes = document.querySelectorAll(
+          'input[type="checkbox"]'
+        );
+        allCheckboxes.forEach((checkbox) => {
+          checkbox.checked = false;
+        });
+
+        // Now toggle the current box and checkbox
+        element.classList.toggle("selected");
+        const checkbox = document.getElementById(optionId);
+        if (checkbox) {
+          checkbox.checked = !checkbox.checked;
+        }
+
+        // Update the button state
+        updateButtonState();
+      }
+
+      function updateButtonState() {
+        const anyChecked =
+          document.querySelector('input[type="checkbox"]:checked') !== null;
+        document.getElementById("nextButton").disabled = !anyChecked;
+      }
+
+      // Disable the button initially
+      document.addEventListener("DOMContentLoaded", () => {
+        updateButtonState();
+      });
+    </script>
+  </body>
+</html>

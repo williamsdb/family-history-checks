@@ -1,0 +1,9 @@
+.DS_Store
+logo-512x512.png
+logo.webp
+logo1.webp
+logo2.webp
+src/.DS_Store
+src/Thompson.rmtree
+src/config.php
+src/query.php
